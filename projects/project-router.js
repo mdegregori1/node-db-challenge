@@ -87,7 +87,7 @@ router.get('/:id/tasks', (req, res) => {
     })
     .catch (err => {
         console.log(err)
-      res.status(500).json({ message: 'Failed to create new resource' });
+      res.status(500).json({ message: 'Failed to create new task' });
     });
   });
   
