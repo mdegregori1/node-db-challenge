@@ -30,7 +30,6 @@ router.get('/projects', (req, res) => {
   });
 
 
-
 router.get('/:id/tasks', (req, res) => {
     const id = req.params.id;
     Projects.findTasks(id)
@@ -49,7 +48,6 @@ router.get('/:id/tasks', (req, res) => {
       res.status(500).json({error: "error getting the steps by id"})
     })
   })
-
 
 
   router.post('/projects', (req, res) => {
@@ -90,9 +88,6 @@ router.get('/:id/tasks', (req, res) => {
       res.status(500).json({ message: 'Failed to create new task' });
     });
   });
-  
-
-
   
 
 
