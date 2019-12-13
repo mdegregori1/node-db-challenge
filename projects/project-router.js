@@ -83,7 +83,7 @@ router.get('/:id/tasks', (req, res) => {
   
     Projects.addTask(Data)
     .then(task => {
-      res.status(201).json(task);
+      res.status(201).json({...task, ...Data});
     })
     .catch (err => {
         console.log(err)
